@@ -1,0 +1,12 @@
+#wpai-chat div {
+    padding: 10px;
+    border-radius: 6px;
+}
+
+#wpai-chat div:nth-child(odd) {
+    background: #f1f1f1;
+}
+
+#wpai-chat div:nth-child(even) {
+    background: #e7f3ff;
+}
