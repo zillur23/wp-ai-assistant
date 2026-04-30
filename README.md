@@ -11,6 +11,43 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 AI Assistant for WordPress. Generate content, support replies, and code using Ollama (local AI) or OpenAI.
 
+== Follow this to run the code Via Ollama and Wordpress Plugin ==
+
+1. First install the ollama on your machine and download the model you want to work with.
+2. Run Server.js via the Node and you must config the server. It will work as Ollama local API requests.
+3. Activate the plugin and use it. The response will be slower or faster based on your machine.
+
+******Follow Full Guide for Activate *******
+********************************************
+###STEP 1: Install Ollama
+
+👉 Download from: [https://ollama.com](https://ollama.com/)
+bash:: ollama run llama3
+
+Testing of API
+curl http://localhost:11434/api/generate-d'{
+  "model": "llama3",
+  "prompt": "Write a blog intro about WordPress"
+}'
+
+###STEP 2: Create Local API Server (Node.js)
+
+Download the "server.js" file and install the dependencies and put this on seperate directory on your machine and run the server. You need to define of your own.
+ model: "codellama:latest",
+ change it to 
+  model: "your-own-model",
+  
+Install dependencies:
+
+```
+bash:: npm init-y
+bash:: npm install express axios cors
+```
+Must run the server
+bash:: node server.js
+
+###STEP 2: Make zip file and activate the plugin
+
 == Description ==
 
 WP AI Assistant brings AI-powered content generation directly into your WordPress dashboard.
